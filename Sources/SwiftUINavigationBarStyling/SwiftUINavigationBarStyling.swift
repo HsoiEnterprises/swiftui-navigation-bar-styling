@@ -11,12 +11,12 @@ public struct NavigationBarColorModifier: ViewModifier {
     let coloredAppearance = UINavigationBarAppearance()
     coloredAppearance.configureWithTransparentBackground()
     coloredAppearance.backgroundColor = .clear
-    var titleTextAttributes = [NSAttributedString.Key.foregroundColor: textColor]
+    var titleTextAttributes: [NSAttributedString.Key : Any] = [.foregroundColor: textColor]
     if let titleFont = titleFont {
         titleTextAttributes[.font] = titleFont
     }
     coloredAppearance.titleTextAttributes = titleTextAttributes
-    var largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: textColor]
+    var largeTitleTextAttributes: [NSAttributedString.Key : Any] = [.foregroundColor: textColor]
     if let largeTitleFont = largeTitleFont {
         largeTitleTextAttributes[.font] = largeTitleFont
     }
